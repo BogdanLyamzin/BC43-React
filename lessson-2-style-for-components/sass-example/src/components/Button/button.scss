@@ -1,0 +1,15 @@
+.btn {
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #fff;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: red;
+    border: 1px solid red;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn.active {
+    background-color:red;
+    color: #fff;
+}
