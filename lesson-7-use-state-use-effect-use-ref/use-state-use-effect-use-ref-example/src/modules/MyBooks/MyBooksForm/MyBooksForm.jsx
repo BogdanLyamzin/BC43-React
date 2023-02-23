@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import initialState from "./initialState";
 
@@ -6,6 +6,12 @@ import styles from "./my-books-form.module.scss";
 
 const MyBooksForm = ({onSubmit}) => {
     const [state, setState] = useState({...initialState});
+
+    const titleRef = useRef(false);
+
+    useEffect(()=> {
+        titleRef.current.focus();
+    }, [])
 
     const handleChange = ({ target }) => {
         setState(prevState => {
@@ -28,7 +34,7 @@ const MyBooksForm = ({onSubmit}) => {
         <form onSubmit={handleSubmit} className={styles.form}>
             <div className={styles.formGroup}>
                 <label>Book title</label>
-                <input value={title} name="title" onChange={handleChange} className={styles.textField} placeholder="Book title" required />
+                <input ref={titleRef} value={title} name="title" onChange={handleChange} className={styles.textField} placeholder="Book title" required />
             </div>
             <div className={styles.formGroup}>
                 <label>Book author</label>

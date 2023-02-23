@@ -14,11 +14,11 @@ function App() {
     <>
       {/* <Navbar menuItems={navbarMenuItems} /> */}
       <div className="container">
-        {/* <PostsSearch /> */}
+        <PostsSearch />
         {/* <Posts /> */}
         {/* <ToggleButton text="Click me" /> */}
         {/* <Vote /> */}
-        <MyBooks />
+        {/* <MyBooks /> */}
       </div>
     </>
   );

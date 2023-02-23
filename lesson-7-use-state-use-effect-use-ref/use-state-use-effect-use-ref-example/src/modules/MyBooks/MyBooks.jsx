@@ -1,15 +1,27 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { nanoid } from "nanoid";
 
 import MyBooksBlock from "./MyBooksBlock/MyBooksBlock";
 import MyBooksList from "./MyBooksList/MyBooksList";
 import MyBooksForm from "./MyBooksForm/MyBooksForm";
 
+import { getInitialValue } from "../../shared/utils/localStorage";
+
 import styles from "./my-books.module.scss";
 
 const MyBooks = () => {
-    const [books, setBooks] = useState([]);
+    const [books, setBooks] = useState(()=> getInitialValue("my-books", []));
     const [filter, setFilter] = useState(false);
+
+    const firstRender = useRef(true);
+
+    useEffect(()=> {
+        if(firstRender.current) {
+            firstRender.current = false;
+            return;
+        }
+        localStorage.setItem("my-books", JSON.stringify(books));
+    }, [books])
 
     const isDublicate = ({title, author}) => {
         const normalizedTitle = title.toLowerCase();
