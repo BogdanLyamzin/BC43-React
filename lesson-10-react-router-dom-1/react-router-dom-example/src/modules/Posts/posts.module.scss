@@ -1,0 +1,32 @@
+.heading {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 25px 0;
+    text-align: center;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.item {
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 15px;
+
+    &Title {
+        display: block;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: #000;
+    }
+}
+
+.error {
+    color: red;
+    margin-bottom: 25px;
+}
