@@ -1,0 +1,27 @@
+[
+    {
+        "id": "1",
+        "text": "Home page",
+        "link": "/"
+    },
+    {
+        "id": "2",
+        "text": "Posts search page",
+        "link": "/posts"
+    },
+    {
+        "id": "3",
+        "text": "My books page",
+        "link": "/my-books"
+    },
+    {
+        "id": "4",
+        "text": "My favorite books page",
+        "link": "/my-favorite-books"
+    },
+    {
+        "id": "5",
+        "text": "Contacts page",
+        "link": "/contacts"
+    }
+]
